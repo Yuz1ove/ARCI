@@ -1,0 +1,174 @@
+{
+  "numTotalTests": 35,
+  "numPassedTests": 35,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "success": true,
+  "startTime": 1791682321306,
+  "files": [
+    {
+      "path": "tests/qa/core/architecture-boundary.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "Core imports only Core, node crypto/fs/path and zod; no transitive adapter escape",
+          "status": "passed"
+        },
+        {
+          "title": "STARRYLINK_DOMAIN_REFERENCES_IN_CORE=0 in source types schemas exported symbols, ignoring comments",
+          "status": "passed"
+        },
+        {
+          "title": "architecture negative controls detect re-export, dynamic import, domain symbol, schema and string leaks",
+          "status": "passed"
+        },
+        {
+          "title": "public entry adds optional semantic exports; Core stays isolated and server provider route stays disabled",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "path": "tests/qa/core/generic.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "T1 snapshot remains version 1 when source/selection advances to version 2",
+          "status": "passed"
+        },
+        {
+          "title": "T2 missing/null/explicit unknown are UNKNOWN; false and zero remain known",
+          "status": "passed"
+        },
+        {
+          "title": "T3 StarryLink adapter feeds generic Core and returns evidence-bound constraints",
+          "status": "passed"
+        },
+        {
+          "title": "T4 future adapter implements public contract without changing Core",
+          "status": "passed"
+        },
+        {
+          "title": "T5 generic persistence isolates domains and preserves audit after deletion",
+          "status": "passed"
+        },
+        {
+          "title": "T6 stale revision from a second reader cannot overwrite disk",
+          "status": "passed"
+        },
+        {
+          "title": "T7 malicious domain payload is inert data and cannot grant execution or override server ID",
+          "status": "passed"
+        },
+        {
+          "title": "snapshot hash/reference/selection mutations fail closed",
+          "status": "passed"
+        },
+        {
+          "title": "empty/all not-applicable constraints and unversioned source cannot invent eligibility",
+          "status": "passed"
+        },
+        {
+          "title": "strict schema and bounded JSON reject extra constraints, unsafe keys, cycles and oversized/deep data",
+          "status": "passed"
+        },
+        {
+          "title": "08 reader preserves original records without silently fabricating new decision evidence",
+          "status": "passed"
+        },
+        {
+          "title": "workbench saves core input/hash/snapshot/revision/time audit and retains historical sources",
+          "status": "passed"
+        },
+        {
+          "title": "failed atomic commit retains original memory and bytes",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "path": "tests/qa/core/hardening.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "rejects forged status before save without changing bytes",
+          "status": "passed"
+        },
+        {
+          "title": "rejects forged executionStatus before save without changing bytes",
+          "status": "passed"
+        },
+        {
+          "title": "rejects forged snapshotId before save without changing bytes",
+          "status": "passed"
+        },
+        {
+          "title": "rejects forged audit before save without changing bytes",
+          "status": "passed"
+        },
+        {
+          "title": "rejects forged restored result",
+          "status": "passed"
+        },
+        {
+          "title": "bounds disk read before JSON parse",
+          "status": "passed"
+        },
+        {
+          "title": "detects global audit corruption",
+          "status": "passed"
+        },
+        {
+          "title": "archives before resetting bounded ledger and preserves archive bytes",
+          "status": "passed"
+        },
+        {
+          "title": "deep ledger is rejected before parsing and stale writer lock is preserved",
+          "status": "passed"
+        },
+        {
+          "title": "legacy verification is not upgraded by an unrelated save",
+          "status": "passed"
+        },
+        {
+          "title": "archive directory sync failure preserves the live ledger",
+          "status": "passed"
+        },
+        {
+          "title": "creates parent for a new ledger before taking the writer lock",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "path": "tests/qa/core/pure-entry.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "matches standard SHA256 for utf8",
+          "status": "passed"
+        },
+        {
+          "title": "matches standard SHA256 for utf8",
+          "status": "passed"
+        },
+        {
+          "title": "matches standard SHA256 for utf8",
+          "status": "passed"
+        },
+        {
+          "title": "matches standard SHA256 for utf8",
+          "status": "passed"
+        },
+        {
+          "title": "pure entry transitive imports have no Node or provider capability",
+          "status": "passed"
+        },
+        {
+          "title": "clock and id source are injectable without mutating input",
+          "status": "passed"
+        }
+      ]
+    }
+  ]
+}

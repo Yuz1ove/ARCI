@@ -1,0 +1,471 @@
+{
+  "sourceManifestSha256": "7a0280ff24c57e0fd86c8d99d32b57cdd7b62ae7069e7deb7b466ca2fcb49472",
+  "files": [
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/validation.ts",
+      "newPath": "src/core/validation.ts",
+      "sourceSha256": "8764f6b1968d6f978ceda1b97a084ca20dc21f328eb559d39dc84606abe8f392",
+      "newSha256": "8764f6b1968d6f978ceda1b97a084ca20dc21f328eb559d39dc84606abe8f392",
+      "reason": "Pure core moved byte-for-byte; no topic or application import."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/integrity.ts",
+      "newPath": "src/core/integrity.ts",
+      "sourceSha256": "4cca1613f9ce06bf49c0b357266448a13c84c87ffb929959d71c79630804cc1c",
+      "newSha256": "7feaf8c9f5f4021257cd53a71e77fe8b0f922dfb80ee42b846f8231b10801abb",
+      "reason": "Move core and reevaluate using stored ID/time; validation and replay need no new randomness or clock."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/evidence.ts",
+      "newPath": "src/core/evidence.ts",
+      "sourceSha256": "fe703de34d0e07e33d29ec9a39937eb63dd8670b61718d670e407bc0625c6567",
+      "newSha256": "2e2855a7be4731713100449c6d1fef25b220b55e995f536a6ccb8b3566643426",
+      "reason": "Move core and validate createSnapshot output immediately against its public schema (24-source bound and runtime identifiers)."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/adapter-contract.ts",
+      "newPath": "src/core/adapter-contract.ts",
+      "sourceSha256": "7ab857c0f36ee31c2547ea72c1dabcc303d742a8f0cb1f4fa482c88612be9f75",
+      "newSha256": "7ab857c0f36ee31c2547ea72c1dabcc303d742a8f0cb1f4fa482c88612be9f75",
+      "reason": "Pure core moved byte-for-byte; no topic or application import."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/contracts.ts",
+      "newPath": "src/core/contracts.ts",
+      "sourceSha256": "cd452cf399599698f2a7754dcd05c44b9e37f21d92bc36d0b92d8c6e534f5461",
+      "newSha256": "cd452cf399599698f2a7754dcd05c44b9e37f21d92bc36d0b92d8c6e534f5461",
+      "reason": "Pure core moved byte-for-byte; no topic or application import."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/engine.ts",
+      "newPath": "src/core/engine.ts",
+      "sourceSha256": "1b2d616b598725e43fa978ac6d519017ea49e88449d9ba14a727ba9f9f631957",
+      "newSha256": "2afe29938872da718fcd37755fff73e5a9b39f10033c14a55b9ee3a2fe6e8b92",
+      "reason": "Move pure core and fix proven missing-evidence defect: empty source references now return UNKNOWN/EVIDENCE_REFERENCE_MISSING; comparison operators and status priority unchanged."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/hash.ts",
+      "newPath": "src/core/hash.ts",
+      "sourceSha256": "b8b98d15ee5f5549eb55d8e8885fe93dcfd74abdb3e64735575f14e2e207308e",
+      "newSha256": "b8b98d15ee5f5549eb55d8e8885fe93dcfd74abdb3e64735575f14e2e207308e",
+      "reason": "Pure core moved byte-for-byte; no topic or application import."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/runtime.ts",
+      "newPath": "src/core/runtime.ts",
+      "sourceSha256": "da9473db8cbab24d6c8e96e4bddef4f03de0a9fcdfe542df33a3dd99ca1170e4",
+      "newSha256": "da9473db8cbab24d6c8e96e4bddef4f03de0a9fcdfe542df33a3dd99ca1170e4",
+      "reason": "Pure core moved byte-for-byte; no topic or application import."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/core/persistence.ts",
+      "newPath": "src/adapters/file-store.ts",
+      "sourceSha256": "78d22a100ab4e69e3860e99ab4bf87981e6ac30d7d8ee6d53b100ca24ef2f92b",
+      "newSha256": "0a396385f4731cc97ee181c0fcbacab47c60556cde6330294d3768f39df72d51",
+      "reason": "Move file I/O to optional adapter, adjust imports, and validate newly appended SAVED audit before any commit; backwards host clock fails without changing durable state."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/index.ts",
+      "newPath": "tests/compat/src/index.ts",
+      "sourceSha256": "158074dfcd3d03b1c1bd59d7f91be7ec155d7a6939471b3f1135042fda90eb1a",
+      "newSha256": "158074dfcd3d03b1c1bd59d7f91be7ec155d7a6939471b3f1135042fda90eb1a",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/local-store.ts",
+      "newPath": "tests/compat/src/qa/local-store.ts",
+      "sourceSha256": "35e73847908702749fc1f6956b36d325dfc4efb8737a2d6b43566cfc8fa33a33",
+      "newSha256": "35e73847908702749fc1f6956b36d325dfc4efb8737a2d6b43566cfc8fa33a33",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/local-contracts.ts",
+      "newPath": "tests/compat/src/qa/local-contracts.ts",
+      "sourceSha256": "e2843370d62bd894dbab506415b3bac595dfa4a6c467d6cde45018de9ec54458",
+      "newSha256": "e2843370d62bd894dbab506415b3bac595dfa4a6c467d6cde45018de9ec54458",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/contracts.ts",
+      "newPath": "tests/compat/src/qa/contracts.ts",
+      "sourceSha256": "0fa3c43ef18bed9708c201c673acf928f16fb15cc6eef7488e4f47ce772dce04",
+      "newSha256": "0fa3c43ef18bed9708c201c673acf928f16fb15cc6eef7488e4f47ce772dce04",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/server.ts",
+      "newPath": "tests/compat/src/qa/server.ts",
+      "sourceSha256": "7f27b7db6a8816e0a555273503872a880e28b7c882b6773229192a54885877d1",
+      "newSha256": "7f27b7db6a8816e0a555273503872a880e28b7c882b6773229192a54885877d1",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/adapters/shared.ts",
+      "newPath": "tests/compat/src/qa/adapters/shared.ts",
+      "sourceSha256": "bbd21cbe7260cef36079579b25f715ea54e5b5533413b441ec0af8b9d631e0e3",
+      "newSha256": "94e02b4a96e6ab832e71aa022b7ae473768fc5ce93591afca83ae1414c87c03d",
+      "reason": "Test-only historical compatibility host; explicitly bind source-presence rule to snapshot root while preserving all upstream assertions."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/adapters/starrylink/schema.ts",
+      "newPath": "tests/compat/src/qa/adapters/starrylink/schema.ts",
+      "sourceSha256": "d8c6033f0fea83195e7e3cd1666aba953d4183c70d6920171f8005ac101c066d",
+      "newSha256": "d8c6033f0fea83195e7e3cd1666aba953d4183c70d6920171f8005ac101c066d",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/adapters/starrylink/fixtures.ts",
+      "newPath": "tests/compat/src/qa/adapters/starrylink/fixtures.ts",
+      "sourceSha256": "851b2628b6b7e4d18a10a1450a5c28f08fe0f532f21c03e12d4e57580aaeb417",
+      "newSha256": "851b2628b6b7e4d18a10a1450a5c28f08fe0f532f21c03e12d4e57580aaeb417",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/adapters/starrylink/index.ts",
+      "newPath": "tests/compat/src/qa/adapters/starrylink/index.ts",
+      "sourceSha256": "b59f613106847d7e2aeabedcb907ad93f2ca2d27f286d92ba11f6267444a7f9f",
+      "newSha256": "06d1c3dfdd5137412dee6c9ac42723c63dd2f4b3d6ce464b45d9262b46682b47",
+      "reason": "Test-only adapter migration: bind battery/channels/network/priority checks to existing source conditions so the original PASS assertion remains evidence-bound."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/workbench/contracts.ts",
+      "newPath": "tests/compat/src/qa/workbench/contracts.ts",
+      "sourceSha256": "50c51aacac63517ef628638fb82d0a88de57c56f25f3b276c1a587bf7709e74c",
+      "newSha256": "50c51aacac63517ef628638fb82d0a88de57c56f25f3b276c1a587bf7709e74c",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/workbench/store.ts",
+      "newPath": "tests/compat/src/qa/workbench/store.ts",
+      "sourceSha256": "66dd187ae7d63b86a655ab0f4a22c7b98bd7d0a96254a333715f5693c62d6c12",
+      "newSha256": "66dd187ae7d63b86a655ab0f4a22c7b98bd7d0a96254a333715f5693c62d6c12",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/workbench/scenarios/starrylink-disaster/index.ts",
+      "newPath": "tests/compat/src/qa/workbench/scenarios/starrylink-disaster/index.ts",
+      "sourceSha256": "894ab8636a9cde35d39a7713b826350071b517dee3997c7fc1066fda7629a2c2",
+      "newSha256": "894ab8636a9cde35d39a7713b826350071b517dee3997c7fc1066fda7629a2c2",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/workbench/scenarios/event-planning/schema.ts",
+      "newPath": "tests/compat/src/qa/workbench/scenarios/event-planning/schema.ts",
+      "sourceSha256": "797512373443f1db1eafc484aac3a9649a0a64d9354afdb3a10d0112f11b95f9",
+      "newSha256": "797512373443f1db1eafc484aac3a9649a0a64d9354afdb3a10d0112f11b95f9",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/workbench/scenarios/event-planning/fixtures.ts",
+      "newPath": "tests/compat/src/qa/workbench/scenarios/event-planning/fixtures.ts",
+      "sourceSha256": "10de43b7430a43f6aca930b4f1ea8633f225f55b74a0371b9727afaab2284041",
+      "newSha256": "10de43b7430a43f6aca930b4f1ea8633f225f55b74a0371b9727afaab2284041",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/workbench/scenarios/event-planning/index.ts",
+      "newPath": "tests/compat/src/qa/workbench/scenarios/event-planning/index.ts",
+      "sourceSha256": "9fc64e7c1b26648fb1edf6f20c4417388a43fe19f1e6942f1ee6b2cfea6e929e",
+      "newSha256": "9fc64e7c1b26648fb1edf6f20c4417388a43fe19f1e6942f1ee6b2cfea6e929e",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/semantic/ollama.ts",
+      "newPath": "tests/compat/src/qa/semantic/ollama.ts",
+      "sourceSha256": "20fe80a907ce094437b9dd9173f8c4e885d3b910e976b7190dd5397a0291b792",
+      "newSha256": "20fe80a907ce094437b9dd9173f8c4e885d3b910e976b7190dd5397a0291b792",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/semantic/reference.ts",
+      "newPath": "tests/compat/src/qa/semantic/reference.ts",
+      "sourceSha256": "0dc2bfce4d882f028c155f02eab3ea9e71c9a0beb679e3e371bcca3d488d3d97",
+      "newSha256": "0dc2bfce4d882f028c155f02eab3ea9e71c9a0beb679e3e371bcca3d488d3d97",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/semantic/contracts.ts",
+      "newPath": "tests/compat/src/qa/semantic/contracts.ts",
+      "sourceSha256": "4f0ebc53b6d25e2e5db477b99fe8023f4e6813e7f088d64f681b4e2dd8aa5e14",
+      "newSha256": "4f0ebc53b6d25e2e5db477b99fe8023f4e6813e7f088d64f681b4e2dd8aa5e14",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/qa/semantic/service.ts",
+      "newPath": "tests/compat/src/qa/semantic/service.ts",
+      "sourceSha256": "bf9bd53dd8f5c9d89de23d78d66ad460352f7b9b91e4363ae55c7bf02ac80283",
+      "newSha256": "bf9bd53dd8f5c9d89de23d78d66ad460352f7b9b91e4363ae55c7bf02ac80283",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/foundations/async-boundary.ts",
+      "newPath": "tests/compat/src/foundations/async-boundary.ts",
+      "sourceSha256": "5d606440495d6586ea85dad2aa9dd3a029f15d38997cbc0c4bbb92e00d2205c1",
+      "newSha256": "5d606440495d6586ea85dad2aa9dd3a029f15d38997cbc0c4bbb92e00d2205c1",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "src/domain/ids.ts",
+      "newPath": "tests/compat/src/domain/ids.ts",
+      "sourceSha256": "bf3e1c6922e491f2181ca13970bf6a9cdbb80dcc0c26508650a9eb4df634af88",
+      "newSha256": "bf3e1c6922e491f2181ca13970bf6a9cdbb80dcc0c26508650a9eb4df634af88",
+      "reason": "Historical host compatibility fixture, test-only; excluded from npm tarball."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "tests/qa/core/pure-entry.test.ts",
+      "newPath": "tests/upstream/pure-entry.test.ts",
+      "sourceSha256": "6509cb6542b699e264d68fc7b835b7b4d5405a996ddb7ec0a58407a355c468a8",
+      "newSha256": "c0ff76de310d7314c1fa257991ae600e524f2991c9ee86f8e9dc9026b3614f97",
+      "reason": "All original assertions retained; import/scan paths adapted to extracted core and compatibility fixtures."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "tests/qa/core/generic.test.ts",
+      "newPath": "tests/upstream/generic.test.ts",
+      "sourceSha256": "5e73ac5e407ad043aeddb103829deedc306c7ba5b5d24113acda18175d9258f0",
+      "newSha256": "a5c7b6573b16070753c98ad059e1e5fad3dbc36e81b9e264f5ce9578f6bc1a1f",
+      "reason": "All original assertions retained; import/scan paths adapted to extracted core and compatibility fixtures."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "tests/qa/core/architecture-boundary.test.ts",
+      "newPath": "tests/upstream/architecture-boundary.test.ts",
+      "sourceSha256": "8317cfca5c152d749c12b78823629903188a084e8649b88ddfd0b30f59e27169",
+      "newSha256": "f811170aa69f198ce6fa922e3cd46e6ee93e79d7e95040a1613f11a8f63e4f20",
+      "reason": "All original assertions retained; import/scan paths adapted to extracted core and compatibility fixtures."
+    },
+    {
+      "repository": "Yuz1ove/Autonomous-Resilient-Communication-Intelligence",
+      "lineageCommit": "40dfe289ac2f81687a0859b70a94dd4aee58b45a",
+      "sourceCandidate": "2026-10-03/generic",
+      "candidateCommit": null,
+      "screenedLocalCommit": "a5ffed9109bfe21afe9d9672830a7e12a520ba18",
+      "originalPath": "tests/qa/core/hardening.test.ts",
+      "newPath": "tests/upstream/hardening.test.ts",
+      "sourceSha256": "edd91b1c3fd17445b549d767a53366ec162f21ba2506f1e75a169f6eeae0ac82",
+      "newSha256": "5b5723d12e20b95679e455d93f7951c1d633bcb06a9830a62cacd70e1670aeb9",
+      "reason": "All original assertions retained; import/scan paths adapted to extracted core and compatibility fixtures."
+    }
+  ],
+  "newImplementation": [
+    {
+      "path": "src/contracts.ts",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "src/index.ts",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "src/core/versioned.ts",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "examples/release.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "examples/minimal.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "examples/inventory.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "examples/run-adapter.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "examples/adapters/release.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "examples/adapters/inventory.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "scripts/clean.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "scripts/import-probe.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "scripts/check-architecture.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "scripts/check-consumer.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    },
+    {
+      "path": "scripts/check-docs.mjs",
+      "reason": "New standalone packaging/API/replay/example/validation/documentation in this extraction; not claimed as historical source."
+    }
+  ]
+}

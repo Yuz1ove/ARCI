@@ -1,0 +1,232 @@
+{
+  "numTotalTests": 48,
+  "numPassedTests": 41,
+  "numFailedTests": 7,
+  "numPendingTests": 0,
+  "success": false,
+  "startTime": 1791682693016,
+  "files": [
+    {
+      "path": "tests/core-v2/closed-loop.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "ARCI Core V2 closed loop demonstrates event through validation, feedback, replanning, and replay",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2 closed loop keeps provider and language-model output outside every authority boundary",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2 closed loop fails closed when execution authority is absent",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2 closed loop classifies an initial persistence failure and never executes",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2 closed loop stops replanning at the configured bound",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "path": "tests/core-v2-v21/production-recovery.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "ARCI Core V2.1 durable production coordinator persists the complete preparation before exposing an executable decision",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator fails preparation closed on TRANSACTION_BEGIN_FAILURE",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator fails preparation closed on WRITE_FAILURE",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator fails preparation closed on COMMIT_FAILURE",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator fails preparation closed on CONNECTION_TERMINATION",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator reconciles a lost preparation acknowledgement without duplicating records",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator restarts after selection and during approval wait with the same signature",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator restores an approved request as ready to execute",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator detects a meaningful state change, supersedes approval, refuses execution, and replans",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator keeps execution calls at zero when intent persistence hits TRANSACTION_BEGIN_FAILURE",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator keeps execution calls at zero when intent persistence hits WRITE_FAILURE",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator keeps execution calls at zero when intent persistence hits COMMIT_FAILURE",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator keeps execution calls at zero when intent persistence hits CONNECTION_TERMINATION",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator never retries an execution whose intent exists but outcome persistence failed",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator round-trips, restarts, replays, and prevents duplicate execution after completion",
+          "status": "passed"
+        },
+        {
+          "title": "ARCI Core V2.1 durable production coordinator runs the required two-cycle stale-approval acceptance trajectory",
+          "status": "passed"
+        },
+        {
+          "title": "one durable execution slot has one dispatcher across competing coordinators",
+          "status": "passed"
+        },
+        {
+          "title": "risk condition cannot be approved when already unsatisfied",
+          "status": "passed"
+        },
+        {
+          "title": "inspection does not append recovery records",
+          "status": "passed"
+        },
+        {
+          "title": "reconciliation requires exact durable fence and never dispatches again",
+          "status": "passed"
+        },
+        {
+          "title": "failed observed action records a failure audit while retaining EXECUTED transport status",
+          "status": "passed"
+        },
+        {
+          "title": "provider timeout records uncertainty and prevents retry",
+          "status": "passed"
+        },
+        {
+          "title": "lost claim response never grants dispatch ownership",
+          "status": "passed"
+        },
+        {
+          "title": "reject/cancel approvals are blocked rather than waiting",
+          "status": "passed"
+        },
+        {
+          "title": "concurrent reconciliation and late execution cannot append contradictory outcomes",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "path": "tests/foundations/async-boundary.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "timeout aborts and late completion retains lease until settled",
+          "status": "passed"
+        },
+        {
+          "title": "cancelled queued work never dispatches",
+          "status": "passed"
+        },
+        {
+          "title": "caps pending work per shared endpoint",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "path": "tests/verification/verification.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "ACK verification verifies an exactly correlated ACK",
+          "status": "passed"
+        },
+        {
+          "title": "ACK verification does not verify a missing ACK",
+          "status": "passed"
+        },
+        {
+          "title": "ACK verification rejects wrong messageId",
+          "status": "passed"
+        },
+        {
+          "title": "ACK verification rejects wrong executionId",
+          "status": "passed"
+        },
+        {
+          "title": "ACK verification rejects wrong routeId",
+          "status": "passed"
+        },
+        {
+          "title": "ACK verification classifies a late ACK as timeout",
+          "status": "passed"
+        },
+        {
+          "title": "ACK verification rejects a duplicate ACK",
+          "status": "passed"
+        },
+        {
+          "title": "ACK verification never verifies an ACK for a failed execution",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "path": "tests/provider/scenarios.test.ts",
+      "status": "failed",
+      "assertions": [
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios runs the complete adversarial matrix",
+          "status": "failed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios proves each pre-verification stage remains non-authoritative",
+          "status": "failed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios fails authentication, authorization, correlation, replay, rotation, and generation attacks closed",
+          "status": "failed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios enforces kill-switch checks before every new attempt while retaining evidence-only callbacks",
+          "status": "failed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios survives all restart boundaries without duplicate authority",
+          "status": "failed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios reaches delivery only through the sealed VerificationEngine event chain",
+          "status": "failed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios replays all 54 canonical scenarios ten times with zero divergence",
+          "status": "failed"
+        }
+      ]
+    }
+  ]
+}

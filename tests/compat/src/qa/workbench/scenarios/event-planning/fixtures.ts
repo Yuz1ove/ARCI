@@ -1,0 +1,3 @@
+import { randomUUID } from 'node:crypto';
+import type { DocumentVersion } from '../../contracts.js';
+export function eventDocuments():DocumentVersion[]{const common={topic:'planning' as const,scope:'校內活動 A',effective_at:'2026-01-01T00:00:00.000Z',expires_at:'2026-12-31T23:59:59.000Z'};const values=[1,2].map(v=>({metadata:{...common,document_id:'activity-rules',title:'自製校內活動規則',version:String(v)},paragraphs:[{id:'p1',text:`活動限校內活動 A；規則第 ${v} 版。`},{id:'p2',text:`報名截止 2026-10-${v===1?'20':'15'} 17:00（臺灣時間）；人數上限 ${v===1?30:20} 人。`}],rules:{deadline:`2026-10-${v===1?'20':'15'}T09:00:00.000Z`,capacity:v===1?30:20,action:'符合文件條件後，可提出活動安排申請；尚未執行。'}}));return values.map(v=>({id:randomUUID(),...v,source:'synthetic',imported_at:new Date().toISOString()}));}

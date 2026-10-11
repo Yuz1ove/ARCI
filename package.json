@@ -1,0 +1,62 @@
+{
+  "name": "@arci/core",
+  "version": "0.3.0",
+  "description": "ARCI evidence-aware deterministic decision core",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yuz1ove/ARCI.git"
+  },
+  "author": "Yuz1ove",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./contracts": {
+      "types": "./dist/contracts.d.ts",
+      "import": "./dist/contracts.js"
+    },
+    "./adapters/file-store": {
+      "types": "./dist/adapters/file-store.d.ts",
+      "import": "./dist/adapters/file-store.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "docs",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "example:minimal": "node examples/minimal.mjs",
+    "example:inventory": "node examples/inventory.mjs",
+    "example:release": "node examples/release.mjs",
+    "check:architecture": "node scripts/check-architecture.mjs",
+    "check:docs": "node scripts/check-docs.mjs",
+    "check:consumer": "node scripts/check-consumer.mjs",
+    "verify": "npm run typecheck && npm run build && npm test && npm run check:architecture && npm run check:docs && npm run example:minimal && npm run example:inventory && npm run example:release && npm run check:consumer"
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vitest": "3.2.7",
+    "@types/node": "24.13.3"
+  }
+}

@@ -1,0 +1,3 @@
+import { randomUUID } from 'node:crypto';
+import type { DocumentVersion } from '../../workbench/contracts.js';
+export function starrylinkDocuments():DocumentVersion[]{const common={topic:'disaster' as const,scope:'合成通訊演練 A',effective_at:'2026-01-01T00:00:00.000Z',expires_at:'2026-12-31T23:59:59.000Z'};const values=[{metadata:{...common,document_id:'disaster-demo',title:'災害通訊合成資料',version:'1'},paragraphs:[{id:'p1',text:'本資料是合成演練，只檢查通訊條件，不是救災指揮或生命安全建議。'}],conditions:{network:'unavailable' as const,battery:40,priority:'urgent' as const,channels:['radio' as const]}}];return values.map(v=>({id:randomUUID(),...v,source:'synthetic',imported_at:new Date().toISOString()}));}

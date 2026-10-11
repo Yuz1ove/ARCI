@@ -1,0 +1,44 @@
+{
+  "numTotalTests": 7,
+  "numPassedTests": 7,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "success": true,
+  "startTime": 1791682710138,
+  "files": [
+    {
+      "path": "tests/provider/scenarios.test.ts",
+      "status": "passed",
+      "assertions": [
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios runs the complete adversarial matrix",
+          "status": "passed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios proves each pre-verification stage remains non-authoritative",
+          "status": "passed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios fails authentication, authorization, correlation, replay, rotation, and generation attacks closed",
+          "status": "passed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios enforces kill-switch checks before every new attempt while retaining evidence-only callbacks",
+          "status": "passed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios survives all restart boundaries without duplicate authority",
+          "status": "passed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios reaches delivery only through the sealed VerificationEngine event chain",
+          "status": "passed"
+        },
+        {
+          "title": "Phase 4E authenticated provider sandbox scenarios replays all 54 canonical scenarios ten times with zero divergence",
+          "status": "passed"
+        }
+      ]
+    }
+  ]
+}

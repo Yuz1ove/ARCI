@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tgz
+coverage/
+.validation/
+.env*
+!.env.example
+*.db
+*.sqlite*
+.DS_Store
