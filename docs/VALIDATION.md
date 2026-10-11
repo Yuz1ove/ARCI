@@ -2,7 +2,7 @@
 
 本輪原始命令與錯誤完整輸出留在本機隔離 audit；公開只保存去除主機路徑的驗證摘要，沒有原專案執行日誌或私人資料。
 
-環境：macOS arm64，Node 24.19.0、npm 10.9.4、TypeScript 5.9.3、Vitest 3.2.7、Zod 4.4.3。每次 Vitest 最多 1 worker。原研究、主題專案及前次候選均以唯讀方式查核。
+環境：macOS arm64，Node 24.19.0、npm 10.9.4、TypeScript 5.9.3、Zod 4.4.3。來源基線與最初本機驗收使用 Vitest 3.2.7；最終公開 clone 使用修補後的 Vitest 4.1.11（Vite 7.3.7 僅為開發依賴）。每次 Vitest 最多 1 worker。原研究、主題專案及前次候選均以唯讀方式查核。
 
 ## 來源基線，先於抽離
 
@@ -42,7 +42,7 @@
 
 ## 獨立套件驗收
 
-乾淨 `npm ci --offline --ignore-scripts --no-audit --no-fund`（先前正常下載的 npm 快取）退出 0。`npm run verify` 退出 0，依序完成：
+最終在公開 URL 的全新 clone、全新 npm cache 執行 `npm ci --ignore-scripts`，退出 0，安裝 46 packages，當日 audit 為 0 項漏洞。`npm run verify` 退出 0，先建置公開入口，再檢查型別與以下項目：
 
 | 項目 | 本輪結果 |
 |---|---|
@@ -56,8 +56,22 @@
 
 [本輪命令、退出碼與程式雜湊](evidence/validation.json)。
 
-遠端推送後將從公開 URL 重新 clone 驗證，結果另記，以上目前是本機獨立副本驗收。
+## 公開發布後重新 clone
+
+- 目標：[Yuz1ove/ARCI](https://github.com/Yuz1ove/ARCI)，`main` 與 `codex/independent-core`；保留 `ea978fee` 的公開歷史，無 force push。
+- 完整驗收的程式 commit：[6105f4da503d7692f48b0ef34549bb4201cfe3f8](https://github.com/Yuz1ove/ARCI/commit/6105f4da503d7692f48b0ef34549bb4201cfe3f8)。後續驗收紀錄提交只更新文件，不改變已驗證程式雜湊。
+- 無憑證 `git clone`：exit 0；`npm ci --ignore-scripts`：exit 0；`npm run verify`：exit 0。所有程式檔與發布副本的雜湊相同。
+- macOS 公開 clone：49 passed／9 files；外部 consumer、公開型別、兩個情境、0 應用 import I/O 全數通過。
+- [Ubuntu GitHub Actions](https://github.com/Yuz1ove/ARCI/actions/runs/38104056618)：success，Node 24.21.0／npm 10.9.4，49 passed／9 files，包含相同完整驗收。
+
+### 發布驗證實際找出的問題
+
+首次 [798e448 的 CI](https://github.com/Yuz1ove/ARCI/actions/runs/38103833526) 與公開 clone 退出 2：`verify` 先 typecheck、後 build，乾淨 clone 找不到 package exports 對應的 dist 型別。已改為先 build，再 typecheck；沒有修改型別要求、測試斷言或忽略範圍。
+
+接著 consumer 在乾淨 cache 出現 `ENOTCACHED`：npm ci 的 tarball 快取不保證包含 registry metadata。改用 prefer-offline 安裝，缺少依賴資訊時正常讀取 npm registry；範例和核心 import 的離線／無 I/O 檢查維持原樣。安裝不是核心執行的一部分。
+
+乾淨安裝另回報 Vitest 3 的開發依賴警示，包括 [mocker](https://github.com/advisories/GHSA-82fw-gwwq-j7x9) 與 [tinypool](https://github.com/advisories/GHSA-5gmw-xhrv-c9v3)。更新到 Vitest 4.1.11，固定相容的 Vite 7.3.7；npm 10 在未固定的選用 peer 解析曾出現 edgesOut 錯誤，固定後乾淨安裝成功。最終當日 npm audit 為 0，49 項既有斷言全部維持。核心唯一執行依賴仍是 Zod。
 
 ## 未執行範圍
 
-原研究全部歷史 suite、真實 PostgreSQL／外部 provider／LLM、真實個案或現場通訊、Presidential／SEA 全站測試與遷移均未執行。macOS 之外平台的 CI 狀態以 GitHub Actions 實際結果為準，不把待跑 workflow 當成通過。
+原研究全部歷史 suite、真實 PostgreSQL／外部 provider／LLM、真實個案或現場通訊、Presidential／SEA 全站測試與遷移均未執行。macOS arm64 與 Ubuntu CI 已通過；Windows、NFS 與硬體斷電行為仍未資格化。

@@ -1,8 +1,7 @@
 {
   "date": "2026-10-11",
   "timezone": "Asia/Taipei",
-  "startedAt": "2026-10-11T01:50:09.124956+00:00",
-  "status": "LOCAL_VALIDATION_PASSED",
+  "status": "PUBLISHED_AND_REMOTE_CLONE_VALIDATED",
   "environment": {
     "platform": "Darwin",
     "osVersion": "27.0.1",
@@ -10,25 +9,30 @@
     "node": "24.19.0",
     "npm": "10.9.4",
     "typescript": "5.9.3",
-    "vitest": "3.2.7",
-    "zod": "4.4.3"
+    "vitest": "4.1.11",
+    "zod": "4.4.3",
+    "vite": "7.3.7 (development tooling only)"
   },
   "commands": [
     {
-      "command": "npm ci --offline --ignore-scripts --no-audit --no-fund",
+      "command": "git -c credential.helper= clone --branch main https://github.com/Yuz1ove/ARCI.git <fresh-directory>",
+      "exitCode": 0
+    },
+    {
+      "command": "npm ci --ignore-scripts",
       "exitCode": 0,
-      "scope": "clean install from previously downloaded npm cache"
+      "scope": "fresh public clone, new npm cache, 46 packages installed, audit 0 vulnerabilities"
     },
     {
       "command": "npm run verify",
       "exitCode": 0,
       "subcommands": [
         {
-          "command": "npm run typecheck",
+          "command": "npm run build",
           "exitCode": 0
         },
         {
-          "command": "npm run build",
+          "command": "npm run typecheck",
           "exitCode": 0
         },
         {
@@ -88,7 +92,7 @@
       ]
     }
   },
-  "payloadSha256": "df96b6dd6c6c40ed630c1c9be364778e0525f8b0682df5a6d2e94eafa411a1dc",
+  "payloadSha256": "d6c391e7eb1e33048d97cad8d45d2464dd73cddc0c4d881cfaa4d3c71bd378fc",
   "payload": [
     {
       "path": "examples/adapters/inventory.mjs",
@@ -116,11 +120,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "ca8a1f909d2ca58d68d673187200f98652a65aa6f9d6380de1dea0f47628ba8d"
+      "sha256": "5a58225617adbb2c5fa9f9731ca8a98d7bb0345d0d314c35e27a5427d26c9a8e"
     },
     {
       "path": "package.json",
-      "sha256": "14f593fbafa46dd7785a37ee044c7db14eae5ad1305222afa970b8b6253671bf"
+      "sha256": "e4ab22615d3c2979e022db3ac921db9756bd1fa74ae20b618c38d8594aba1d02"
     },
     {
       "path": "scripts/check-architecture.mjs",
@@ -128,7 +132,7 @@
     },
     {
       "path": "scripts/check-consumer.mjs",
-      "sha256": "75a00baabdeadd4e18724845a400e58ef00a2e888e4451f53b9bd6eebabc66f7"
+      "sha256": "22a8494942162da50f4d55dc9200b7ae27609a4de8cb00ffe03961fb0e19d196"
     },
     {
       "path": "scripts/check-docs.mjs",
@@ -373,5 +377,56 @@
     "field deployment",
     "Presidential or SEA application migration"
   ],
-  "remoteClone": "pending publication"
+  "remoteClone": {
+    "repository": "https://github.com/Yuz1ove/ARCI",
+    "branch": "main",
+    "commit": "6105f4da503d7692f48b0ef34549bb4201cfe3f8",
+    "anonymousClone": true,
+    "freshNpmCache": true,
+    "installExitCode": 0,
+    "verifyExitCode": 0,
+    "sourcePayloadMatchesPublication": true,
+    "npmAuditVulnerabilities": 0
+  },
+  "previousLocalValidation": {
+    "commit": "798e4483e9e8605fe5f82854eeb12a6cb45dd65c",
+    "startedAt": "2026-10-11T01:50:09.124956+00:00",
+    "vitest": "3.2.7",
+    "testsPassed": 49,
+    "payloadSha256": "df96b6dd6c6c40ed630c1c9be364778e0525f8b0682df5a6d2e94eafa411a1dc",
+    "limitation": "Existing build artifacts and complete npm cache masked clean-clone verification setup failures."
+  },
+  "verifiedAt": "2026-10-11T02:08:27.446830+00:00",
+  "publicationFailures": [
+    {
+      "commit": "798e4483e9e8605fe5f82854eeb12a6cb45dd65c",
+      "scope": "fresh public clone and Ubuntu CI",
+      "command": "npm run verify",
+      "exitCode": 2,
+      "reason": "Typecheck used public dist entry before build.",
+      "ciUrl": "https://github.com/Yuz1ove/ARCI/actions/runs/38103833526",
+      "fix": "Build public entries before typechecking consumers."
+    },
+    {
+      "scope": "local follow-up with fresh npm cache",
+      "command": "npm run check:consumer",
+      "exitCode": 1,
+      "reason": "npm ci cached tarballs but not zod registry metadata; offline consumer install could not resolve dependencies.",
+      "fix": "Use prefer-offline installation with normal registry fallback; retain all import-I/O and consumer assertions."
+    }
+  ],
+  "ci": {
+    "platform": "ubuntu-latest",
+    "nodeMajor": 24,
+    "npm": "10.9.4",
+    "commit": "6105f4da503d7692f48b0ef34549bb4201cfe3f8",
+    "conclusion": "success",
+    "url": "https://github.com/Yuz1ove/ARCI/actions/runs/38104056618",
+    "node": "24.21.0",
+    "tests": {
+      "passed": 49,
+      "failed": 0,
+      "files": 9
+    }
+  }
 }

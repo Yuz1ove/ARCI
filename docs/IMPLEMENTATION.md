@@ -16,7 +16,7 @@
 - [x] 範例：合成庫存門檻與軟體發布條件，共用引擎，adapter 僅使用公開 API。
 - [x] 隔離驗證：傳遞 import、import 時無 I/O、npm pack／外部 consumer／型別／失敗路徑。
 - [x] 文件：繁中 README、架構、API、來源映射、限制與本輪命令／退出碼。
-- [ ] 發布：安全檢查、noreply 新 commit、非強制推送至既有 main，再由公開 URL clone 驗證。
+- [x] 發布：安全檢查、noreply 新 commit、非強制推送至既有 main，再由公開 URL clone 驗證。
 
 ## Review focus
 

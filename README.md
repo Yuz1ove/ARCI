@@ -34,7 +34,7 @@ flowchart LR
 
 ## 3. Quick Start
 
-需要 Node.js **24** 與 npm **10**（本輪驗證版本見驗證文件；package 最低宣告 Node 22.13，其他平台／版本尚未資格化）。
+需要 Node.js **24** 與 npm **10**（本輪驗證版本見驗證文件；package 最低宣告 Node 22.13，macOS arm64 與 Ubuntu CI 已驗證，其他平台／版本尚未資格化）。
 
 ```sh
 git clone https://github.com/Yuz1ove/ARCI.git
@@ -108,7 +108,7 @@ console.log(JSON.stringify({
 
 ## 7. 驗證與限制
 
-來源基線在本輪先跑 **35 項通過**，原 35 項斷言全部保留並指向抽離後核心。另增加版本重放、缺證據反例、兩情境與封包驗證。[本輪環境、命令、退出碼、實際結果](docs/VALIDATION.md)
+來源基線在本輪先跑 **35 項通過**，原 35 項斷言全部保留並指向抽離後核心。本輪最終 **49 項通過**，包括版本重放、缺證據反例、兩情境與封包驗證；公開 URL 全新 clone 與 Ubuntu CI 均通過。[本輪環境、命令、退出碼、實際結果](docs/VALIDATION.md)
 
 本輪修復「規則沒有任何證據引用仍可 PASS」：現在為 `UNKNOWN / EVIDENCE_REFERENCE_MISSING`，引擎版本 `generic-0.3-evidence-v1`。這是明示的相容性改變，舊版無引用 PASS 不會默默升級為已驗證紀錄。
 
