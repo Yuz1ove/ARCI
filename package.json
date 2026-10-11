@@ -49,14 +49,17 @@
     "check:architecture": "node scripts/check-architecture.mjs",
     "check:docs": "node scripts/check-docs.mjs",
     "check:consumer": "node scripts/check-consumer.mjs",
-    "verify": "npm run typecheck && npm run build && npm test && npm run check:architecture && npm run check:docs && npm run example:minimal && npm run example:inventory && npm run example:release && npm run check:consumer"
+    "verify": "npm run build && npm run typecheck && npm test && npm run check:architecture && npm run check:docs && npm run example:minimal && npm run example:inventory && npm run example:release && npm run check:consumer"
   },
   "dependencies": {
     "zod": "4.4.3"
   },
   "devDependencies": {
     "typescript": "5.9.3",
-    "vitest": "3.2.7",
+    "vitest": "4.1.11",
     "@types/node": "24.13.3"
+  },
+  "overrides": {
+    "vite": "7.3.7"
   }
 }

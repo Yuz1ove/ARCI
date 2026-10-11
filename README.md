@@ -45,7 +45,7 @@ npm run example:minimal
 npm test
 ```
 
-最小範例輸出 `PASS`、`NOT_DISPATCHED`、`NOT_ESTABLISHED`。不需要 API key、網站、模型、原專案資料庫或本機掛載。安裝依賴需要 npm 網路或既有快取；範例本身離線執行。
+最小範例輸出 `PASS`、`NOT_DISPATCHED`、`NOT_ESTABLISHED`。不需要 API key、網站、模型、原專案資料庫或本機掛載。安裝依賴（包含驗收中的外部 consumer 安裝）需要 npm 網路或完整快取；範例本身離線執行。
 
 完整驗收：
 

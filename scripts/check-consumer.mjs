@@ -22,7 +22,7 @@ try {
     assert(packed.files.some(f=>f.path===file), `Missing package documentation/example: ${file}`);
   }
   writeFileSync(join(consumer,'package.json'),JSON.stringify({name:'independent-arci-consumer',private:true,type:'module'}));
-  run(npm,['install','--offline','--ignore-scripts','--no-audit','--no-fund',join(consumer,packed.filename)]);
+  run(npm,['install','--prefer-offline','--ignore-scripts','--no-audit','--no-fund',join(consumer,packed.filename)]);
   assert(!realpathSync(join(consumer,'node_modules/@arci/core')).startsWith(resolve(root)), 'Installed package must not link to source');
   cpSync(join(root,'examples'),join(consumer,'examples'),{recursive:true});
   cpSync(join(root,'scripts/import-probe.mjs'),join(consumer,'import-probe.mjs'));
